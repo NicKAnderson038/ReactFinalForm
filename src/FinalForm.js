@@ -13,10 +13,10 @@ const onSubmit = values => {
 const FinalForm = () => (
   <Form
     onSubmit={onSubmit}
-    render={() => (
+    render={({ handleSubmit }) => (
       <div>
         <h2>Final Form</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           <Field name="customer-id" component={renderInput} />
           <button type="submit">Submit</button>
         </form>
