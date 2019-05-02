@@ -11,7 +11,7 @@ import "./App.css";
 
 const Index = () => (
   <div>
-    <h2>Mini-Course Overview</h2>
+    <h2>Examles</h2>
     <nav>
       <ol>
         <li>
@@ -41,7 +41,7 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <header className="header">
-            <span className="logo">Example</span>
+            <span className="logo">@</span>
             <span className="title">4 Ways to manage form state in React</span>
           </header>
           <Router>
