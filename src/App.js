@@ -41,7 +41,6 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <header className="header">
-            <span className="logo">@</span>
             <span className="title">4 Ways to manage form state in React</span>
           </header>
           <Router>
