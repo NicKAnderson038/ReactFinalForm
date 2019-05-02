@@ -2,18 +2,22 @@ import React from "react";
 import Input from "./Input";
 import { Form, Field } from "react-final-form";
 
+const renderInput = ({ input, meta }) => (
+  <Input {...input} type="text" errorMessage={meta.touched && meta.error} />
+);
+
+const onSubmit = values => {
+  alert(JSON.stringify(values));
+};
+
 const FinalForm = () => (
   <Form
+    onSubmit={onSubmit}
     render={() => (
       <div>
         <h2>Final Form</h2>
         <form>
-          <Input
-            type="text"
-            label="Customer ID"
-            id="customer-id"
-            name="customer-id"
-          />
+          <Field name="customer-id" component={renderInput} />
           <button type="submit">Submit</button>
         </form>
       </div>
